@@ -2,23 +2,23 @@ import React, { Component } from 'react'
 import LayoutMain from '../layout/LayoutMain'
 
 class EmployeeManager extends Component {
+    // eslint-disable-next-line react/state-in-constructor
     state = {
         collapsed: false,
     }
 
     toggle = () => {
-        this.setState({
-            collapsed: !this.state.collapsed,
-        })
+        this.setState(({ collapsed }) => ({ collapsed: !collapsed }))
     }
 
     render() {
+        const { collapsed } = this.state
         const header = {
-            collapsed: this.state.collapsed,
+            collapsed,
             toggle: this.toggle,
         }
         const listMenuItem = {
-            collapsed: this.state.collapsed,
+            collapsed,
         }
         return (
             <LayoutMain header={header} listMenuItem={listMenuItem}>

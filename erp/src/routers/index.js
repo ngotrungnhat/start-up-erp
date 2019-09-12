@@ -1,12 +1,12 @@
-import EmployeeManager from "../pages/EmployeeManager";
+import EmployeeManager from '../pages/EmployeeManager'
 
-export const routers = [
-           {
-               path: '/',
-               component: EmployeeManager,
-           },
-           {
-               path: '/employee-manager',
-               component: EmployeeManager,
-           },
-       ]
+export default [
+    {
+        path: '/',
+        component: EmployeeManager,
+    },
+    {
+        path: '/employee-manager',
+        component: EmployeeManager,
+    },
+]
