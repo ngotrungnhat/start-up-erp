@@ -1,7 +1,8 @@
 import React from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import shortid from 'shortid'
 import './App.css'
-import routers from './routers'
+import routes from './routers'
 
 // eslint-disable-next-line no-shadow
 const AppRoute = ({ component: Component, ...rest }) => (
@@ -12,13 +13,12 @@ const AppRoute = ({ component: Component, ...rest }) => (
 const App = () => (
     <BrowserRouter>
         <Switch>
-            {routers.map((element, index) => (
+            {routes.map(element => (
                 <AppRoute
                     exact
                     path={element.path}
                     component={element.component}
-                    // eslint-disable-next-line react/no-array-index-key
-                    key={index}
+                    key={shortid.generate()}
                 />
             ))}
         </Switch>
