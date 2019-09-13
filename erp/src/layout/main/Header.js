@@ -3,14 +3,14 @@ import { Layout, Icon } from 'antd'
 
 const { Header } = Layout
 
-const Headers = ({ collapsed, toggle }) => (
+const CustomHeader = ({ collapsed, toggleCollapse }) => (
     <Header style={{ background: '#fff', padding: 0 }}>
         <Icon
             className="trigger"
             type={collapsed ? 'menu-unfold' : 'menu-fold'}
-            onClick={toggle}
+            onClick={toggleCollapse}
         />
     </Header>
 )
 
-export default Headers
+export default CustomHeader
