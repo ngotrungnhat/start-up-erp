@@ -1,8 +1,9 @@
 import React from 'react'
 import { Typography, Row, Col, Select, Input, Icon, Divider, Table } from 'antd'
 import LayoutMain from '../layout/main'
+import SectionHeader from '../core/SectionHeader'
 
-const { Title, Text } = Typography
+const { Title } = Typography
 const { Option } = Select
 
 const tableData = [
@@ -111,13 +112,11 @@ const tableColumn = [
 
 const BranchList = () => (
     <LayoutMain>
-        <Title level={2} style={{ marginBottom: '2rem' }}>
-            Quản lý cơ sở
-        </Title>
-        <Text type="secondary" style={{ fontSize: '20px' }}>
-            Tổng hợp thông tin các cơ sở
-        </Text>
-        <Row style={{ margin: '2rem 0 3rem 0' }} justify="space-between">
+        <SectionHeader
+            main="Quản lý cơ sở"
+            secondary="Tổng hợp thông tin các cơ sở"
+        />
+        <Row style={{ marginBottom: '3rem' }} justify="space-between">
             <Col span={6} style={{ padding: '0 1rem 0 0' }}>
                 <Title level={3}>Cơ sở</Title>
                 <Select defaultValue="hn" style={{ width: '100%' }}>
